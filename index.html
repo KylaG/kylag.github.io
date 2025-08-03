@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyla Guru</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        .hero {
+            margin-top: 100px;
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-top: 60px;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .intro {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        ul.experience {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        ul.experience li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        ul.experience li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        .links {
+            margin-top: 40px;
+        }
+
+        .links a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #0052cc;
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 60px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            nav ul {
+                gap: 20px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Fade in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .container > * {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#speaking">Speaking</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="hero">
+            <h1>Kyla Guru</h1>
+            <img src="kyla-photo.jpg" alt="Kyla Guru" class="profile-photo">
+            <p class="intro">Technologist, Safety Engineer, Social Entrepreneur</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            
+            <h3>Currently</h3>
+            <p>I lead cyber safety policy development and enforcement at Anthropic, where I'm building our cyber harm constitution, developing monitoring and streaming classifiers, and creating enforcement guidelines. My work focuses on developing AI-enabled cyber defense capabilities and supporting civil society through spyware detection and censorship filtering projects.</p>
+            
+            <p>Recent work includes:</p>
+            <ul class="experience">
+                <li>CAMLIS 2024 - Presented on large language models and threat intelligence</li>
+                <li>IEEE AI x Cyber - Contributing to the intersection of AI and cybersecurity</li>
+                <li>CAMLIS 2025 - Upcoming research on threat actor attribution using LLMs</li>
+            </ul>
+
+            <h3>Previously</h3>
+            <p>I recently completed my MS in Computer Science from Stanford, where my thesis focused on LLMs and threat intelligence. During my time there, I co-founded the GirlCon Tech Conference, now in its 8th year, bringing together 900 virtual and 200 in-person high school students annually.</p>
+            
+            <p>Before Anthropic, I gained experience across various technical domains - from building robots and developing ML models for national security at Vannevar Labs, to creating simulation software at NVIDIA, leading AV fleet deployment research at Cruise, and flying drones at Zipline.</p>
+
+            <h3>Beyond Work</h3>
+            <p>In my free time, you can find me running, biking, aqua-jogging, or tinkering with friends. I practice daily hot yoga at CorePower and I'll never say no to an interesting conversation or paper discussion over a jog or coffee ☕️. Drop me a line!</p>
+        </section>
+
+        <section id="speaking" class="section">
+            <h2>Speaking</h2>
+            <p>I regularly speak about AI safety, cybersecurity, and the intersection of machine learning and threat intelligence. Recent and upcoming engagements include:</p>
+            
+            <ul class="experience">
+                <li>CAMLIS 2025 - "Threat Actor Attribution Using Large Language Models"</li>
+                <li>IEEE AI x Cyber Symposium - "Building Defensive AI Capabilities"</li>
+                <li>CAMLIS 2024 - "LLMs in Threat Intelligence: Opportunities and Challenges"</li>
+                <li>GirlCon Tech Conference - Annual keynote on women in cybersecurity</li>
+            </ul>
+            
+            <p>For speaking inquiries, please reach out via email.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>I'm always interested in connecting with others working on AI safety, cybersecurity, and defensive applications of machine learning.</p>
+            
+            <div class="links">
+                <a href="mailto:kyla@anthropic.com">Email</a>
+                <a href="https://linkedin.com/in/kylaguru" target="_blank">LinkedIn</a>
+                <a href="https://github.com/kylaguru" target="_blank">GitHub</a>
+                <a href="https://twitter.com/kylaguru" target="_blank">Twitter</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Kyla Guru. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
