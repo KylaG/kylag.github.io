@@ -57,6 +57,7 @@
         .hero {
             margin-top: 100px;
             margin-bottom: 80px;
+            text-align: center;
         }
 
         h1 {
@@ -91,7 +92,13 @@
         .intro {
             font-size: 1.1em;
             color: #666;
+            margin-bottom: 15px;
+        }
+
+        .emoji-row {
+            font-size: 1.5em;
             margin-bottom: 40px;
+            letter-spacing: 0.3em;
         }
 
         .profile-photo {
@@ -105,6 +112,7 @@
 
         .section {
             margin-bottom: 60px;
+            text-align: left;
         }
 
         ul.experience {
@@ -127,20 +135,33 @@
             color: #999;
         }
 
+        /* Pretty pink color for all links */
+        a {
+            color: #E75480;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #D1446B;
+            text-decoration: underline;
+        }
+
+        nav a {
+            color: #666;
+        }
+
+        nav a:hover {
+            color: #000;
+            text-decoration: none;
+        }
+
         .links {
             margin-top: 40px;
         }
 
         .links a {
-            color: #0066cc;
-            text-decoration: none;
             margin-right: 20px;
-            transition: color 0.3s ease;
-        }
-
-        .links a:hover {
-            color: #0052cc;
-            text-decoration: underline;
         }
 
         footer {
@@ -202,24 +223,25 @@
         <section id="home" class="hero">
             <h1>Kyla Guru</h1>
             <img src="kyla-photo.jpg" alt="Kyla Guru" class="profile-photo">
-            <p class="intro">Technologist, Safety Engineer, Social Entrepreneur </p>
+            <p class="intro">Safety Engineer, Social Entrepreneur, Security Supergirl</p>
+            <div class="emoji-row">🌸👩🏽‍💻🪩🔒</div>
         </section>
 
         <section id="about" class="section">
             <h2>About Me</h2>
             
             <h3>Currently</h3>
-            <p>I lead model cyber safety on the Safeguards team at <a href="https://anthropic.com" target="_blank">Anthropic</a>, where I'm running cyber evals, engineering safety systems across the stack, and investigating how cyber threat actors are using Claude today.</p>
+            <p>I lead model cyber safety on the Safeguards team at <a href="https://anthropic.com" target="_blank">Anthropic</a>, where I run cyber evals, engineer safety systems across the stack, and investigate how cyber threat actors are using Claude today. </p>
             
-            <p>Since high school, I've been running <a href="https://bitsnbytes.us.com" target="_blank">Bits N' Bytes Cybersecurity Education</a> (a K-12 nonprofit) and <a href="https://girlcon.org" target="_blank">GirlCon Conference</a>, now in its 8th year bringing together 900 virtual and 200 in-person students annually.</p>
+            <p>Since high school, I've been leading <a href="https://bitsnbytes.us.com" target="_blank">Bits N' Bytes Cybersecurity Education</a> (a K-12 nonprofit) and <a href="https://girlcon.org" target="_blank">GirlCon Conference</a>, now in its 8th year bringing together 900 virtual and 200 in-person students annually. 📚</p>
 
             <h3>Previously</h3>
-            <p>I completed my MS and BS in Computer Science from <a href="https://stanford.edu" target="_blank">Stanford</a>, with Honors in <a href="https://cisac.fsi.stanford.edu/" target="_blank">Inernational Security</a>.
+            <p>I completed my MS and BS in Computer Science from <a href="https://stanford.edu" target="_blank">Stanford</a>, with Honors in <a href="https://cisac.fsi.stanford.edu/" target="_blank">International Security</a>. 🌏</p>
             
-            <p>At Stanford, I co-founded <a href="https://stanfordwins.org" target="_blank">Women in National Security @ Stanford (WINS)</a>, became the national champion in both the <a href="https://nationalccdc.org" target="_blank">Collegiate Cyber Defense Competition (CCDC)</a> and <a href="https://atlanticcouncil.org/programs/scowcroft-center-for-strategy-and-security/cyber-statecraft-initiative/cyber-9-12/" target="_blank">Atlantic Council's Cyber 9/12</a> (with Stanford's first all-female cyber team!), built satellites for government @ <a href="https://spacex.com" target="_blank">SpaceX</a>, designed features for civil society groups @ <a href="https://apple.com" target="_blank">Apple</a>, and worked on election security @ <a href="https://cisa.gov" target="_blank">CISA</a> within the Dept. of Homeland Security.</p>
+            <p>At Stanford, I co-founded <a href="https://stanfordwins.org" target="_blank">Women in National Security @ Stanford (WINS)</a>, became the national champion in both the <a href="https://nationalccdc.org" target="_blank">Collegiate Cyber Defense Competition (CCDC)</a> and <a href="https://atlanticcouncil.org/programs/scowcroft-center-for-strategy-and-security/cyber-statecraft-initiative/cyber-9-12/" target="_blank">Atlantic Council's Cyber 9/12</a> (with Stanford's first all-female cyber team!) 🏆, built satellites for government @ <a href="https://spacex.com" target="_blank">SpaceX</a> 🛰️, designed features for civil society groups @ <a href="https://apple.com" target="_blank">Apple</a>, and worked on election security @ <a href="https://cisa.gov" target="_blank">CISA</a> within the Dept. of Homeland Security.</p>
 
             <h3>Beyond Work</h3>
-            <p>In my free time, you can find me running, hiking, doing yoga, or dancing bhangra with friends. I'll never turn down an interesting conversation about research or new products over a jog, coffee, or walk along the SF waterfront. Text me, beep me, if you want to reach me!</p>
+            <p>In my free time, you can find me running, hiking, doing yoga, or dancing bhangra with friends. I'll never turn down an interesting conversation about research, new products, or education over a jog, coffee, or walk along the SF waterfront. 🌁 Text me, beep me, if you want to reach me! </p>
         </section>
 
         <section id="speaking" class="section">
