@@ -237,6 +237,55 @@
         .container > * {
             animation: fadeIn 0.8s ease-out;
         }
+        
+        /* Contact section styling */
+        .topic-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 25px 0;
+            align-items: center;
+        }
+        
+        .topic-tag {
+            background: linear-gradient(135deg, #E75480, #F06292);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 2px 8px rgba(231, 84, 128, 0.3);
+        }
+        
+        .topic-tag:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(231, 84, 128, 0.4);
+            background: linear-gradient(135deg, #D1446B, #E75480);
+        }
+        
+        .topic-tag:nth-child(2n) {
+            animation-delay: 0.5s;
+        }
+        
+        .topic-tag:nth-child(3n) {
+            animation-delay: 1s;
+        }
+        
+        .topic-tag:nth-child(4n) {
+            animation-delay: 1.5s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -300,7 +349,7 @@
 
         <section id="speaking" class="section">
             <h2>Speaking</h2>
-            <p>I regularly speak about topics like embedding safety into product, cybersecurity and the end user, and the intersection of machine learning and threat intelligence. I have previously spoken at <a href="https://www.youtube.com/watch?v=ZKvc5YsgMOY" target="_blank">RSA Conference USA and APJ</a>, <a href="https://www.youtube.com/watch?v=L1OR8DxRlc0" target="_blank">TEDxChicago</a>, and hundreds of K-12 schools globally.</p>
+            <p>I regularly speak about topics like embedding safety into product, cybersecurity and the end user, and the intersection of machine learning and threat intelligence. I have previously spoken at <a href="https://www.youtube.com/watch?v=ZKvc5YsgMOY" target="_blank">RSA Conference USA and APJ</a>, <a href="https://www.youtube.com/watch?v=L1OR8DxRlc0" target="_blank">TEDxChicago</a>, and <a href="https://www.episcopalacademy.org/post-details/~board/school-news/post/clare-foundation-stem-speakers-series-features-kyla-guru" target="_blank">hundreds of K-12 schools</a> globally.</p>
             
             <p>Here are some upcoming venues I am speaking at:</p>
             
@@ -315,6 +364,20 @@
 
         <section id="contact" class="section">
             <h2>Contact</h2>
+            <p>Let's talk about...</p>
+            
+            <div class="topic-tags">
+                <span class="topic-tag">threat intelligence</span>
+                <span class="topic-tag">education</span>
+                <span class="topic-tag">new gadgets</span>
+                <span class="topic-tag">geopolitics of cyber</span>
+                <span class="topic-tag">edtech</span>
+                <span class="topic-tag">AI safety</span>
+                <span class="topic-tag">product security</span>
+                <span class="topic-tag">making homemade chai</span>
+                <span class="topic-tag">whatever makes your heart sing</span>
+            </div>
+            
             <p>I'm always interested in connecting with others working on AI safety, cybersecurity, and defensive applications of machine learning.</p>
             
             <div class="links">
