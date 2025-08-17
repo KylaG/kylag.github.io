@@ -254,7 +254,6 @@
             border-radius: 20px;
             font-size: 14px;
             font-weight: 500;
-            cursor: pointer;
             transition: all 0.3s ease;
             animation: float 3s ease-in-out infinite;
             box-shadow: 0 2px 8px rgba(231, 84, 128, 0.3);
@@ -285,6 +284,93 @@
             50% {
                 transform: translateY(-5px);
             }
+        }
+        
+        /* Bookshelf component */
+        .bookshelf-section {
+            margin: 30px 0;
+        }
+        
+        .bookshelf {
+            position: relative;
+            background: linear-gradient(180deg, #8B4513 0%, #A0522D 100%);
+            height: 8px;
+            border-radius: 4px;
+            margin: 20px 0 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .books-row {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .book {
+            position: relative;
+            width: 35px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            cursor: default;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .book:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        
+        .book-spine {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            padding: 8px 4px;
+            font-size: 11px;
+            font-weight: 500;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            line-height: 1.2;
+            text-align: center;
+        }
+        
+        /* Individual book colors and heights */
+        .book.circe {
+            height: 120px;
+            background: linear-gradient(90deg, #8E44AD, #9B59B6);
+        }
+        
+        .book.black-cake {
+            height: 110px;
+            background: linear-gradient(90deg, #2C3E50, #34495E);
+        }
+        
+        .book.galatea {
+            height: 125px;
+            background: linear-gradient(90deg, #E74C3C, #F39C12);
+        }
+        
+        .book.kaikeyi {
+            height: 115px;
+            background: linear-gradient(90deg, #27AE60, #2ECC71);
+            opacity: 0.7;
+        }
+        
+        .book.little-fires {
+            height: 105px;
+            background: linear-gradient(90deg, #E67E22, #F39C12);
+            opacity: 0.7;
+        }
+        
+        .reading-status {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .status-emoji {
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -327,7 +413,7 @@
 
         <section id="research" class="section">
             <h2>Research</h2>
-            <p>My research focuses on AI safety, cybersecurity, and developing defensive capabilities for frontier AI systems. Here are some of my recent publications:</p>
+            <p>My research focuses on using LLMs to understand threat activity & developing defensive capabilities for frontier AI systems. Here are some of my recent publications:</p>
             
             <h3>2025</h3>
             <ul class="experience">
@@ -375,7 +461,39 @@
                 <span class="topic-tag">AI safety</span>
                 <span class="topic-tag">product security</span>
                 <span class="topic-tag">making homemade chai</span>
-                <span class="topic-tag">whatever makes your heart sing</span>
+                <span class="topic-tag">yummy vegetarian recipes</span>
+                <span class="topic-tag">whatever you are passionate about!</span>
+            </div>
+            
+            <div class="bookshelf-section">
+                <div class="reading-status">
+                    <span class="status-emoji">📚</span>Currently reading:
+                </div>
+                <div class="books-row">
+                    <div class="book circe">
+                        <div class="book-spine">Circe</div>
+                    </div>
+                    <div class="book black-cake">
+                        <div class="book-spine">Black Cake</div>
+                    </div>
+                    <div class="book galatea">
+                        <div class="book-spine">Galatea</div>
+                    </div>
+                </div>
+                <div class="bookshelf"></div>
+                
+                <div class="reading-status">
+                    <span class="status-emoji">📖</span>Recently finished:
+                </div>
+                <div class="books-row">
+                    <div class="book kaikeyi">
+                        <div class="book-spine">Kaikeyi</div>
+                    </div>
+                    <div class="book little-fires">
+                        <div class="book-spine">Little Fires Everywhere</div>
+                    </div>
+                </div>
+                <div class="bookshelf"></div>
             </div>
             
             <p>I'm always interested in connecting with others working on AI safety, cybersecurity, and defensive applications of machine learning.</p>
