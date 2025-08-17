@@ -286,7 +286,7 @@
             }
         }
         
-        /* Bookshelf component */
+        /* Book stack component */
         .bookshelf-section {
             margin: 30px 0;
         }
@@ -294,71 +294,86 @@
         .bookshelf {
             position: relative;
             background: linear-gradient(180deg, #8B4513 0%, #A0522D 100%);
-            height: 8px;
-            border-radius: 4px;
-            margin: 20px 0 10px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            height: 12px;
+            border-radius: 6px;
+            margin: 15px 0 25px 0;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+            border: 1px solid #654321;
         }
         
-        .books-row {
+        .bookshelf::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(180deg, #D2691E, #CD853F);
+            border-radius: 3px 3px 0 0;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .books-stack {
             display: flex;
-            align-items: flex-end;
-            gap: 8px;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 20px;
+            align-items: flex-start;
         }
         
         .book {
             position: relative;
-            width: 35px;
-            border-radius: 2px;
+            height: 35px;
+            border-radius: 3px;
             transition: all 0.3s ease;
             cursor: default;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transform-origin: left center;
         }
         
         .book:hover {
-            transform: translateY(-3px);
+            transform: translateX(8px) rotate(1deg);
             box-shadow: 0 4px 12px rgba(0,0,0,0.25);
         }
         
         .book-spine {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            padding: 8px 4px;
-            font-size: 11px;
+            padding: 8px 12px;
+            font-size: 12px;
             font-weight: 500;
             color: white;
             text-shadow: 0 1px 2px rgba(0,0,0,0.3);
             line-height: 1.2;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            white-space: nowrap;
         }
         
-        /* Individual book colors and heights */
+        /* Individual book colors and widths */
         .book.circe {
-            height: 120px;
-            background: linear-gradient(90deg, #8E44AD, #9B59B6);
+            width: 120px;
+            background: linear-gradient(180deg, #8E44AD, #9B59B6);
         }
         
         .book.black-cake {
-            height: 110px;
-            background: linear-gradient(90deg, #2C3E50, #34495E);
+            width: 140px;
+            background: linear-gradient(180deg, #2C3E50, #34495E);
         }
         
         .book.galatea {
-            height: 125px;
-            background: linear-gradient(90deg, #E74C3C, #F39C12);
+            width: 110px;
+            background: linear-gradient(180deg, #E74C3C, #F39C12);
         }
         
         .book.kaikeyi {
-            height: 115px;
-            background: linear-gradient(90deg, #27AE60, #2ECC71);
+            width: 130px;
+            background: linear-gradient(180deg, #27AE60, #2ECC71);
             opacity: 0.7;
         }
         
         .book.little-fires {
-            height: 105px;
-            background: linear-gradient(90deg, #E67E22, #F39C12);
+            width: 180px;
+            background: linear-gradient(180deg, #E67E22, #F39C12);
             opacity: 0.7;
         }
         
@@ -459,7 +474,7 @@
                 <span class="topic-tag">geopolitics of cyber</span>
                 <span class="topic-tag">edtech</span>
                 <span class="topic-tag">AI safety</span>
-                <span class="topic-tag">product security</span>
+                <span class="topic-tag">product safety</span>
                 <span class="topic-tag">making homemade chai</span>
                 <span class="topic-tag">yummy vegetarian recipes</span>
                 <span class="topic-tag">whatever you are passionate about!</span>
@@ -469,7 +484,7 @@
                 <div class="reading-status">
                     <span class="status-emoji">📚</span>Currently reading:
                 </div>
-                <div class="books-row">
+                <div class="books-stack">
                     <div class="book circe">
                         <div class="book-spine">Circe</div>
                     </div>
@@ -485,7 +500,7 @@
                 <div class="reading-status">
                     <span class="status-emoji">📖</span>Recently finished:
                 </div>
-                <div class="books-row">
+                <div class="books-stack">
                     <div class="book kaikeyi">
                         <div class="book-spine">Kaikeyi</div>
                     </div>
@@ -496,7 +511,7 @@
                 <div class="bookshelf"></div>
             </div>
             
-            <p>I'm always interested in connecting with others working on AI safety, cybersecurity, and defensive applications of machine learning.</p>
+            <p>Reach out to me on email or any of my other socials to chat.</p>
             
             <div class="links">
                 <a href="mailto:kylaguru@gmail.com">Email</a>
